@@ -55,6 +55,7 @@ class search
             {
                 $i2=$x;
                 $j2=$y;
+                $stepsCount = 0;
 
                 while($this->matrix[$i2][$j2][0] != 0)
                 {    
@@ -65,8 +66,10 @@ class search
                     $i2=$iMem;
 
                     $map[$i2][$j2] = 1; //1 - маркер пути для отображения
+                    ++$stepsCount;
                 }
                 $map[$x][$y] = 1;
+                $map['steps'] = $stepsCount;
             }
 
             return $map;

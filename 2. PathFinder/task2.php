@@ -74,6 +74,7 @@ catch(exception $ex)
     echo "ОШИБКА: ", $ex->getMessage();
 }
 
+echo $map2['steps'], " шагов.";
 //отображение результата и сохранение в файл
 for($i = 0; $i < $mapSize['height']; ++$i)
 {
