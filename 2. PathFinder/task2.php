@@ -16,7 +16,7 @@ if (!isset($mapFile) || empty($mapFile))
     exit("Указан неправильный или пустой файл");
 }
 $mapSize = array('height'=>count($mapFile),
-                'width'=>strlen($mapFile[0])-2, 
+                'width'=>strlen(trim($mapFile[0])), 
                 'max'=>max(count($mapFile), strlen($mapFile[0])-2)
               );
 $mapArray[$mapSize['height']][$mapSize['width']];
